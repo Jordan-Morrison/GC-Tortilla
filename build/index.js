@@ -82,7 +82,9 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+}
 
 function GCHeader() {
 
@@ -100,11 +102,7 @@ function GCHeader() {
 
     };
 
-    return _react2.default.createElement(
-        "div",
-        { style: styles.headerBar },
-        _react2.default.createElement("img", { style: styles.FIP, src: "https://raw.githubusercontent.com/Jordan-Morrison/GC-Tortilla/master/src/FIPS/Canada_Red_FIP.png" })
-    );
+    return _react2.default.createElement("div", { style: styles.headerBar }, _react2.default.createElement("img", { style: styles.FIP, src: "https://raw.githubusercontent.com/Jordan-Morrison/GC-Tortilla/master/src/FIPS/Canada_Red_FIP.png" }));
 }
 
 exports.default = GCHeader;
