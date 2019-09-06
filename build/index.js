@@ -91,15 +91,10 @@ var _react2 = _interopRequireDefault(_react);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function GCHeader() {
-    return (
-        // <div>
-        //     <img src="./FIPS/Canada_Red_FIP.png"/>
-        // </div>
-        _react2.default.createElement(
-            'h1',
-            null,
-            'Hello World'
-        )
+    return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement("img", { src: "./FIPS/Canada_Red_FIP.png" })
     );
 } // export {GCHeader} from "./GCHeader";
 
