@@ -18,8 +18,27 @@ module.exports = {
             presets: ['env']
           }
         }
-      }
-    ]
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+            {
+                loader: 'url-loader',
+                options:{
+                    fallback: "file-loader",
+                    name: "[name][md5:hash].[ext]",
+                    outputPath: 'assets/',
+                    publicPath: '/assets/'
+                }
+            }
+        ]
+    }
+    ],
+    resolve: {
+        alias:{
+            'assets': path.resolve(__dirname, 'assets')
+        }
+    }
   },
   externals: {
     'react': 'commonjs react' // this line is just to use the React dependency of our parent-testing-project instead of using our own React.
