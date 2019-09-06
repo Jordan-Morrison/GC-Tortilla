@@ -69,30 +69,9 @@ module.exports =
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(2);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function GCHeader() {
-    return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement("img", { src: "./FIPS/Canada_Red_FIP.png" })
-    );
-}
-
-exports.default = GCHeader;
+module.exports = require("react");
 
 /***/ }),
 /* 1 */
@@ -102,23 +81,29 @@ exports.default = GCHeader;
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
-var _GCHeader = __webpack_require__(0);
+var _react = __webpack_require__(0);
 
-Object.defineProperty(exports, "GCHeader", {
-  enumerable: true,
-  get: function get() {
-    return _GCHeader.GCHeader;
-  }
-});
+var _react2 = _interopRequireDefault(_react);
 
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-module.exports = require("react");
+function GCHeader() {
+    return (
+        // <div>
+        //     <img src="./FIPS/Canada_Red_FIP.png"/>
+        // </div>
+        _react2.default.createElement(
+            'h1',
+            null,
+            'Hello World'
+        )
+    );
+} // export {GCHeader} from "./GCHeader";
+
+exports.default = GCHeader;
 
 /***/ })
 /******/ ]);
