@@ -1,1 +1,1 @@
-export {GCHeader} from "./GCHeader";
+export {default as GCHeader} from "./GCHeader";

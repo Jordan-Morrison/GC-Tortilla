@@ -125,9 +125,11 @@ var _GCHeader = __webpack_require__(0);
 Object.defineProperty(exports, "GCHeader", {
   enumerable: true,
   get: function get() {
-    return _GCHeader.GCHeader;
+    return _interopRequireDefault(_GCHeader).default;
   }
 });
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
 /* 2 */
