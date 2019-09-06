@@ -1,10 +1,13 @@
+// webpack.config.js
 var path = require('path');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 module.exports = {
-  entry: './src/index.js',
+  entry: './index.js',
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'index.js',
-    libraryTarget: 'commonjs2' // THIS IS THE MOST IMPORTANT LINE! :mindblow: I wasted more than 2 days until realize this was the line most important in all this guide.
+    libraryTarget: 'commonjs2'
   },
   module: {
     rules: [
@@ -18,22 +21,19 @@ module.exports = {
             presets: ['env']
           }
         }
-      },
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              presets: ['react']
-            }
-          }
-        ],
-      }
+      }, {
+        test: /\.*css$/,
+        use : ExtractTextPlugin.extract({
+            fallback : 'style-loader',
+            use : [
+                'css-loader',
+                'sass-loader'
+            ]
+        })
+       },
     ]
   },
   externals: {
-    'react': 'commonjs react' // this line is just to use the React dependency of our parent-testing-project instead of using our own React.
+    'react': 'commonjs react' 
   }
 };
