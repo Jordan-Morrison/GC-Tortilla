@@ -69,12 +69,6 @@ module.exports =
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
-
-module.exports = require("react");
-
-/***/ }),
-/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -84,7 +78,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _react = __webpack_require__(0);
+var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -111,9 +105,35 @@ function GCHeader() {
         { style: styles.headerBar },
         _react2.default.createElement("img", { style: styles.FIP, src: "https://raw.githubusercontent.com/Jordan-Morrison/GC-Tortilla/master/src/FIPS/Canada_Red_FIP.png" })
     );
-} // export {GCHeader} from "./GCHeader";
+}
 
 exports.default = GCHeader;
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _GCHeader = __webpack_require__(0);
+
+Object.defineProperty(exports, "GCHeader", {
+  enumerable: true,
+  get: function get() {
+    return _GCHeader.GCHeader;
+  }
+});
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+module.exports = require("react");
 
 /***/ })
 /******/ ]);
