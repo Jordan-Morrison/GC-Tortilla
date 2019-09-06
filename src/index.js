@@ -1,28 +1,27 @@
-// export GCHeader from './GCHeader';
+// import GCSplashScreen from "./GCSplashScreen";
 
-import React from 'react';
+// import React, { Component } from 'react'
+// import PropTypes from 'prop-types'
 
-function GCHeader() {
+// import styles from './styles.css'
 
-    const styles = {
-        headerBar: {
-            width: "100%",
-            height: "auto",
-            backgroundColor: "white"
-        },
-        FIP: {
-            width: "300px",
-            maxWidth: "40%",
-            padding: "6px"
-        }
-        
-    };
+// export default class ExampleComponent extends Component {
+//   static propTypes = {
+//     text: PropTypes.string
+//   }
 
-    return (
-        <div style={styles.headerBar}>
-            <img style={styles.FIP} src="https://raw.githubusercontent.com/Jordan-Morrison/GC-Tortilla/master/src/FIPS/Canada_Red_FIP.png"/>
-        </div>
-    );
-}
+//   render() {
+//     const {
+//       text
+//     } = this.props
 
-export default GCHeader;
+//     return (
+//       <div className={styles.test}>
+//         Example Component: {text}
+//       </div>
+//     )
+//   }
+// }
+
+export GCHeader from './GCHeader';
+export GCSplashScreen from './GCSplashScreen';
