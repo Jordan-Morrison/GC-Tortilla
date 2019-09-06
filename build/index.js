@@ -119,17 +119,11 @@ exports.default = GCHeader;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.GCHeader = undefined;
 
 var _GCHeader = __webpack_require__(0);
 
-Object.defineProperty(exports, "GCHeader", {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_GCHeader).default;
-  }
-});
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+exports.GCHeader = _GCHeader.GCHeader;
 
 /***/ }),
 /* 2 */
