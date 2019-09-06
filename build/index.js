@@ -119,11 +119,10 @@ exports.default = GCHeader;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.GCHeader = undefined;
 
 var _GCHeader = __webpack_require__(0);
 
-exports.GCHeader = _GCHeader.GCHeader;
+exports.default = { GCHeader: _GCHeader.GCHeader };
 
 /***/ }),
 /* 2 */
