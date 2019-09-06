@@ -94,7 +94,7 @@ function GCHeader() {
     return _react2.default.createElement(
         "div",
         null,
-        _react2.default.createElement("img", { src: "./FIPS/Canada_Red_FIP.png" })
+        _react2.default.createElement("img", { src: "https://raw.githubusercontent.com/Jordan-Morrison/GC-Tortilla/master/src/FIPS/Canada_Red_FIP.png" })
     );
 } // export {GCHeader} from "./GCHeader";
 
