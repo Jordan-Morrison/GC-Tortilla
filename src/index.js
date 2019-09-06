@@ -1,3 +1,1 @@
-import {GCHeader} from './GCHeader';
-
-export default {GCHeader};
+export {GCHeader} from './GCHeader';

@@ -122,7 +122,12 @@ Object.defineProperty(exports, "__esModule", {
 
 var _GCHeader = __webpack_require__(0);
 
-exports.default = { GCHeader: _GCHeader.GCHeader };
+Object.defineProperty(exports, 'GCHeader', {
+  enumerable: true,
+  get: function get() {
+    return _GCHeader.GCHeader;
+  }
+});
 
 /***/ }),
 /* 2 */
