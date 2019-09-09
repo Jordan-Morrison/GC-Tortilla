@@ -1,34 +1,10 @@
 import React, {useState} from 'react';
 import ScrollLock from 'react-scrolllock';
+import CSS from './GCSplashScreen.css';
 
 function GCSplashScreen(props) {
 
-    const styles = {
-        GCSplashScreen: {
-            position: "fixed",
-            height: "100%",
-            width: "100%",
-            zIndex: 100,
-            backgroundImage: `url(${props.backgroundImage})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundColor: "white",
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center"
-        },
-        GCSplashScreenWindow: {
-            height: "auto",
-            backgroundColor: "white",
-            margin: "0 auto",
-            padding: "50px",
-            borderRadius: "6px",
-        }
-    };
+    const backgroundImage = `url(${props.backgroundImage})`;
 
     // Check for first visit, if it is then show the splash screen
     function firstVisit() {
@@ -60,8 +36,8 @@ function GCSplashScreen(props) {
 
     return (
         <ScrollLock isActive={firstVisit()}>
-            <div style={styles.GCSplashScreen}>
-                <div style={styles.GCSplashScreenWindow}>
+            <div className={CSS.splashScreen} style={backgroundImage}>
+                <div className={CSS.splashScreenWindow}>
                     <a href={props.routes.english}><button onClick={() => {setLang(true)}}>English</button></a>
                     <a href={props.routes.french}><button onClick={() => {setLang(false)}}>Français</button></a>
                 </div>

@@ -1,24 +1,12 @@
 import React from 'react';
+import CSS from './GCFooter.css';
 
-function GCFooter() {
-
-    const styles = {
-        footer: {
-            width: "100%",
-            height: "auto",
-            backgroundColor: "black"
-        },
-        FIP: {
-            width: "300px",
-            maxWidth: "40%",
-            padding: "6px"
-        }
-        
-    };
+function GCFooter(props) {
 
     return (
-        <div style={styles.footer}>
-            <img style={styles.FIP} src="https://raw.githubusercontent.com/Jordan-Morrison/GC-Tortilla/master/src/FIPS/Canada_White_FIP.png"/>
+        <div className={CSS.footer}>
+            <img className={CSS.FIP} src="https://raw.githubusercontent.com/Jordan-Morrison/GC-Tortilla/master/src/FIPS/Canada_White_FIP.png"/>
+            {props.children}
         </div>
     );
 }

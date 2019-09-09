@@ -1,0 +1,11 @@
+.header {
+    width: 100%;
+    height: auto;
+    background-color: white;
+}
+
+.FIP {
+    width: 300px;
+    max-width: 40%;
+    padding: 6px;
+}
