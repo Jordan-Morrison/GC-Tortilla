@@ -36,7 +36,7 @@ function GCSplashScreen(props) {
     function firstVisit() {
         try {
             if (localStorage.langIsEnglish){
-                setScrollLock(false);
+                // setScrollLock(false);
                 styles.GCSplashScreen = {
                     display: "none"
                 }
