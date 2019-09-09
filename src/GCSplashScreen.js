@@ -4,13 +4,15 @@ import CSS from './GCSplashScreen.css';
 
 function GCSplashScreen(props) {
 
-    const backgroundImage = `url(${props.backgroundImage})`;
+    const splashScreenBackground = {
+        backgroundImage: `url(${props.backgroundImage})`
+    }
 
     // Check for first visit, if it is then show the splash screen
     function firstVisit() {
         try {
             if (localStorage.langIsEnglish){
-                styles.GCSplashScreen = {
+                CSS.splashScreen = {
                     display: "none"
                 }
                 return false;
@@ -36,7 +38,7 @@ function GCSplashScreen(props) {
 
     return (
         <ScrollLock isActive={firstVisit()}>
-            <div className={CSS.splashScreen} style={backgroundImage}>
+            <div className={CSS.splashScreen} style={splashScreenBackground}>
                 <div className={CSS.splashScreenWindow}>
                     <a href={props.routes.english}><button onClick={() => {setLang(true)}}>English</button></a>
                     <a href={props.routes.french}><button onClick={() => {setLang(false)}}>Français</button></a>
