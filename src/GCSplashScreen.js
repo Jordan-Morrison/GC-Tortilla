@@ -36,7 +36,7 @@ function GCSplashScreen(props) {
     function firstVisit() {
         try {
             if (localStorage.langIsEnglish){
-                // setScrollLock(false);
+                setScrollLock(false);
                 styles.GCSplashScreen = {
                     display: "none"
                 }
@@ -49,6 +49,7 @@ function GCSplashScreen(props) {
     function setLang(langIsEnglish) {
         try {
             localStorage.langIsEnglish = JSON.stringify(langIsEnglish);
+            setScrollLock(false);
         } catch (error) {
             console.error(error);
         }
