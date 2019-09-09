@@ -3,8 +3,6 @@ import ScrollLock from 'react-scrolllock';
 
 function GCSplashScreen(props) {
 
-    const [scrollingIsLocked, setScrollLock] = useState(true);
-
     const styles = {
         GCSplashScreen: {
             position: "fixed",
@@ -36,10 +34,13 @@ function GCSplashScreen(props) {
     function firstVisit() {
         try {
             if (localStorage.langIsEnglish){
-                setScrollLock(false);
                 styles.GCSplashScreen = {
                     display: "none"
                 }
+                return false;
+            }
+            else {
+                return true;
             }
         } catch (error) {
             console.error(error);
@@ -49,7 +50,6 @@ function GCSplashScreen(props) {
     function setLang(langIsEnglish) {
         try {
             localStorage.langIsEnglish = JSON.stringify(langIsEnglish);
-            setScrollLock(false);
         } catch (error) {
             console.error(error);
         }
@@ -59,7 +59,7 @@ function GCSplashScreen(props) {
     firstVisit();
 
     return (
-        <ScrollLock isActive={scrollingIsLocked}>
+        <ScrollLock isActive={firstVisit()}>
             <div style={styles.GCSplashScreen}>
                 <div style={styles.GCSplashScreenWindow}>
                     <a href={props.routes.english}><button onClick={() => {setLang(true)}}>English</button></a>
