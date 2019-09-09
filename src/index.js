@@ -25,3 +25,4 @@
 
 export GCHeader from './GCHeader';
 export GCSplashScreen from './GCSplashScreen';
+export GCFooter from './GCFooter';
