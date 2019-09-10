@@ -13,11 +13,6 @@ import CSS from './GCSplashScreen.css';
 
 function GCSplashScreen(props) {
 
-    // Default background image is a random image from unsplash with the same resolution as the user's display
-    const splashScreenBackground = {
-        backgroundImage: `url(https://source.unsplash.com/random/${window.innerWidth}x${window.innerHeight})`
-    };
-
     // Check for first visit, if it is then show the splash screen
     function firstVisit() {
         try {
@@ -42,25 +37,12 @@ function GCSplashScreen(props) {
         }
     }
 
-    function getBackgroundImage() {
-        try {
-            if (props.backgroundImage){
-                splashScreenBackground.backgroundImage = `url(${props.backgroundImage})`;
-            }
-        } catch (error) {
-            console.log("No background image provided, using random image from unsplash");
-        }
-    }
-
-    // Check if a background image is passed as a prop, and if so set it
-    getBackgroundImage();
-
     // Run function to see if this is the user's first visit
     firstVisit();
 
     return (
         <ScrollLock isActive={firstVisit()}>
-            <div className={CSS.splashScreen} style={splashScreenBackground}>
+            <div className={CSS.splashScreen} style={{backgroundImage: `url(${props.backgroundImage})`}}>
                 <div className={CSS.splashScreenWindow}>
                     <a href={props.routes.english}><button onClick={() => {setLang(true)}}>English</button></a>
                     <a href={props.routes.french}><button onClick={() => {setLang(false)}}>Français</button></a>
@@ -74,14 +56,17 @@ GCSplashScreen.propTypes = {
     routes: PropTypes.shape({
         english: PropTypes.string.isRequired,
         french: PropTypes.string.isRequired
-    })
+    }),
+    backgroundImage: PropTypes.string
 };
 
 GCSplashScreen.defaultProps = {
     routes: {
         english: "/en",
         french: "/fr"
-    }
+    },
+    // Default background image is a random image from unsplash with the same resolution as the user's display
+    backgroundImage: `https://source.unsplash.com/random/${window.innerWidth}x${window.innerHeight}`
 };
 
 export default GCSplashScreen;
