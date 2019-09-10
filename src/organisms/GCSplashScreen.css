@@ -32,6 +32,8 @@
 .FIP {
     max-width: 300px;
     height: auto;
+    margin-bottom: 10px;
+    object-fit: contain;
 }
 
 .logo {
@@ -60,7 +62,7 @@
     box-shadow: 0 4px #ddd;
     border-style: outset;
     height: auto;
-    min-width: 36px;
+    min-width: 120px;
     border-radius: 4px;
     font-size: 1em;
     cursor: pointer;
