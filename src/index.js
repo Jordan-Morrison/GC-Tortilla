@@ -23,6 +23,7 @@
 //   }
 // }
 
+export GCTortilla from './templates/GCTortilla';
 export GCHeader from './organisms/GCHeader';
 export GCSplashScreen from './organisms/GCSplashScreen';
 export GCFooter from './organisms/GCFooter';
