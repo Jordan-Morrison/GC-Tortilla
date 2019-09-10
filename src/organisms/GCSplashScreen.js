@@ -6,15 +6,14 @@ function GCSplashScreen(props) {
 
     const splashScreenBackground = {
         backgroundImage: `url(${props.backgroundImage})`
-    }
+    };
 
     // Check for first visit, if it is then show the splash screen
     function firstVisit() {
         try {
             if (localStorage.langIsEnglish){
-                CSS.splashScreen = {
-                    display: "none"
-                }
+                // Hide screen
+                splashScreenBackground.display = "none";
                 return false;
             }
             else {

@@ -23,6 +23,6 @@
 //   }
 // }
 
-export GCHeader from './GCHeader';
-export GCSplashScreen from './GCSplashScreen';
-export GCFooter from './GCFooter';
+export GCHeader from './organisms/GCHeader';
+export GCSplashScreen from './organisms/GCSplashScreen';
+export GCFooter from './organisms/GCFooter';
