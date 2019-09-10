@@ -53,10 +53,13 @@ function GCSplashScreen(props) {
                         <a href={props.routes.english}><button onClick={() => {setLang(true)}}>English</button></a>
                         <a href={props.routes.french}><button onClick={() => {setLang(false)}}>Français</button></a>
                     </div>
-                    <div>
-                        <a href="https://www.canada.ca/en/transparency/terms.html">Terms &amp; conditions</a>
-                        <span className={CSS.separator}> &bull; </span>
-                        <a href="https://www.canada.ca/fr/transparence/avis.html">Avis</a>
+                    <div className={CSS.footer}>
+                        <div className={CSS.termsBox}>
+                            <a href="https://www.canada.ca/en/transparency/terms.html">Terms &amp; conditions</a>
+                            <span className={CSS.separator}> &bull; </span>
+                            <a href="https://www.canada.ca/fr/transparence/avis.html">Avis</a>
+                        </div>
+                        <img alt="Government of Canada Wordmark" src="https://raw.githubusercontent.com/Jordan-Morrison/GC-Tortilla/master/src/FIPS/Canada_Wordmark_Colour_FIP.png"/>
                     </div>
                 </div>
             </div>
