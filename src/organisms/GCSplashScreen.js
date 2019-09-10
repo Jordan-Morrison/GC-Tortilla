@@ -1,8 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import ScrollLock from 'react-scrolllock';
 import CSS from './GCSplashScreen.css';
-
-function GCSplashScreen(props) {
 
     /**
      * OPTIONAL PROPS
@@ -12,15 +11,11 @@ function GCSplashScreen(props) {
      * 
      */
 
+function GCSplashScreen(props) {
+
     // Default background image is a random image from unsplash with the same resolution as the user's display
     const splashScreenBackground = {
         backgroundImage: `url(https://source.unsplash.com/random/${window.innerWidth}x${window.innerHeight})`
-    };
-
-    // Default routes if no routes are provided
-    const routes = {
-        english: "/en",
-        french: "/fr"
     };
 
     // Check for first visit, if it is then show the splash screen
@@ -57,25 +52,8 @@ function GCSplashScreen(props) {
         }
     }
 
-    function getRoutes() {
-        try {
-            routes.english = props.routes.english;
-        } catch (error) {
-            console.log("No English route provided, using the default");
-        }
-
-        try {
-            routes.french = props.routes.french;
-        } catch (error) {
-            console.log("No French route provided, using the default");
-        }
-    }
-
     // Check if a background image is passed as a prop, and if so set it
     getBackgroundImage();
-
-    // Check if routes are passed as props, and if so set them
-    getRoutes();
 
     // Run function to see if this is the user's first visit
     firstVisit();
@@ -84,12 +62,26 @@ function GCSplashScreen(props) {
         <ScrollLock isActive={firstVisit()}>
             <div className={CSS.splashScreen} style={splashScreenBackground}>
                 <div className={CSS.splashScreenWindow}>
-                    <a href={routes.english}><button onClick={() => {setLang(true)}}>English</button></a>
-                    <a href={routes.french}><button onClick={() => {setLang(false)}}>Français</button></a>
+                    <a href={props.routes.english}><button onClick={() => {setLang(true)}}>English</button></a>
+                    <a href={props.routes.french}><button onClick={() => {setLang(false)}}>Français</button></a>
                 </div>
             </div>
         </ScrollLock>
     );
 }
+
+GCSplashScreen.propTypes = {
+    routes: PropTypes.shape({
+        english: PropTypes.string.isRequired,
+        french: PropTypes.string.isRequired
+    })
+};
+
+GCSplashScreen.defaultProps = {
+    routes: {
+        english: "/en",
+        french: "/fr"
+    }
+};
 
 export default GCSplashScreen;

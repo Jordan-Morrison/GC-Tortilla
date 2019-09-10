@@ -59,6 +59,7 @@
     "dist"
   ],
   "dependencies": {
+    "prop-types": "^15.7.2",
     "react-scrolllock": "^4.0.1"
   }
 }
