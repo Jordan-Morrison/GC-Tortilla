@@ -12,7 +12,7 @@ function GCTortilla(props) {
             <GCSplashScreen signatureFIP={optionalProps(props.signatureFIP)} logo={optionalProps(props.logo)} routes={optionalProps(props.routes)} terms={optionalProps(props.terms)} wordmarkFIP={optionalProps(props.wordmarkFIP)} backgroundImage={optionalProps(props.backgroundImage)}/>
             <GCHeader signatureFIP={optionalProps(props.signatureFIP)}/>
             {props.children}
-            <GCFooter/>
+            <GCFooter theme={optionalProps(props.footerTheme)} links={optionalProps(props.footerLinks)} FIP={optionalProps(props.wordmarkFIP)}/>
         </div>
     );
 }
@@ -47,6 +47,12 @@ GCTortilla.propTypes = {
         altText: PropTypes.string,
         title: PropTypes.string
     }),
+    footerTheme: PropTypes.oneOf(['light', 'dark']),
+    footerLinks: PropTypes.arrayOf(PropTypes.shape({
+        label: PropTypes.string.isRequired,
+        url: PropTypes.string.isRequired,
+        title: PropTypes.string
+    })),
     backgroundImage: PropTypes.string
 };
 

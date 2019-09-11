@@ -57,7 +57,7 @@ function GCSplashScreen(props) {
                     <div className={CSS.footer}>
                         <div className={CSS.termsBox}>
                             <a href={props.terms.english.url}>{props.terms.english.label}</a>
-                            <span className={CSS.separator}> &bull; </span>
+                            <span className={CSS.separator}>&bull;</span>
                             <a href={props.terms.french.url}>{props.terms.french.label}</a>
                         </div>
                         <img alt={props.wordmarkFIP.altText} title={optionalProps(props.wordmarkFIP.title)} src={props.wordmarkFIP.image}/>
