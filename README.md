@@ -68,6 +68,8 @@ export default App;
     }}
 ```
 
+![The Splash Screen with a custom logo](assets/logoSplashScreen.png)
+
 - **Routes**: An object containing routes for the site's home page in both French and English *(defaults to ```'/en'``` for English and ```'/fr'``` for French)*
     - **English**: *(Required)* Path of the English home page
     - **French**: *(Required)* Path of the French home page
@@ -114,6 +116,9 @@ export default App;
 ```jsx
     <GCTortilla footerTheme={"light"}/>
 ```
+
+![The footer with the light theme](assets/footerLightTheme.png)
+
 - **Footer Links**: An array of objects containing the links to be shown in the footer. If you choose to pass in some links you must pass the following properties:
     - **URL**: The url you wish to link to
     - **Label**: The link's text that the user can click on
@@ -135,6 +140,8 @@ export default App;
         }
     ]}/>
 ```
+
+![The footer with provided links](assets/footerLinks.png)
 
 - **Background Image**: A URL or file path of an image to be used in the background of the splash screen *(Defaults to a random image from [Unsplash](https://unsplash.com))*
 
