@@ -43,9 +43,9 @@ export default App;
 > GCTortilla can be customized by passing the following **optional** props
 
 - **Signature FIP / Branding**: An object containing the branding element that appears at the top of the splash screen window & header *(Defaults to the Government of Canada Signature FIP)*. The object has 3 properties:
-    1. **Image**: *(Required)* URL or file path of an image
-    2. **Alt Text**: *(Optional)* Used in the image's ```alt``` attribute
-    3. **Title**: *(Optional)* Used in the image's ```title``` atteribute
+    - **Image**: *(Required)* URL or file path of an image
+    - **Alt Text**: *(Optional)* Used in the image's ```alt``` attribute
+    - **Title**: *(Optional)* Used in the image's ```title``` atteribute
 
 ```jsx
     <GCTortilla signatureFIP={{
@@ -55,9 +55,9 @@ export default App;
 ```
 
 - **Logo**: An object containing the app's logo that appears in the center of the splash screen window. The object has 3 properties:
-    1. **Image**: *(Required)* URL or file path of an image
-    2. **Alt Text**: *(Optional)* Used in the image's ```alt``` attribute
-    3. **Title**: *(Optional)* Used in the image's ```title``` atteribute
+    - **Image**: *(Required)* URL or file path of an image
+    - **Alt Text**: *(Optional)* Used in the image's ```alt``` attribute
+    - **Title**: *(Optional)* Used in the image's ```title``` atteribute
    
 ```jsx
     <GCTortilla logo={{
@@ -67,8 +67,8 @@ export default App;
 ```
 
 - **Routes**: An object containing routes for the site's home page in both French and English *(defaults to ```'/en'``` for English and ```'/fr'``` for French)*
-    1. **English**: *(Required)* Path of the English home page
-    2. **French**: *(Required)* Path of the French home page
+    - **English**: *(Required)* Path of the English home page
+    - **French**: *(Required)* Path of the French home page
 ```jsx
     <GCTortilla routes={{
         english: "/english",
@@ -77,12 +77,12 @@ export default App;
 ```
 
 - **Terms & Conditions**: Show on the splash screen, terms & conditions is an object containing two objects (English/French) with a URL and a label. Although this is meant to be terms and conditions, you may use this prop to link to anything *(Defaults to the Canada.ca Terms & Conditions in both French and English)*. If you choose to pass the terms prop it **must include** the following properties
-    1. **English**: Object containing a URL and label for the English terms and conditions
-       1. **URL**: English terms and conditions URL
-       2. **Label**: The link's text that the user can click on
-    2. **French**: Object containing a URL and label for the French terms and conditions
-       1. **URL**: French terms and conditions URL
-       2. **Label**: The link's text that the user can click on
+    - **English**: Object containing a URL and label for the English terms and conditions
+       - **URL**: English terms and conditions URL
+       - **Label**: The link's text that the user can click on
+    - **French**: Object containing a URL and label for the French terms and conditions
+       - **URL**: French terms and conditions URL
+       - **Label**: The link's text that the user can click on
 ```jsx
     <GCTortilla terms={{
         english: {
@@ -97,9 +97,9 @@ export default App;
 ```
 
 - **Wordmark FIP / Branding**: An object containing the branding element that appears at the bottom of the splash screen window & footer *(Defaults to the Government of Canada Wordmark FIP)*. The object has 3 properties:
-    1. **Image**: *(Required)* URL or file path of an image
-    2. **Alt Text**: *(Optional)* Used in the image's ```alt``` attribute
-    3. **Title**: *(Optional)* Used in the image's ```title``` atteribute
+    - **Image**: *(Required)* URL or file path of an image
+    - **Alt Text**: *(Optional)* Used in the image's ```alt``` attribute
+    - **Title**: *(Optional)* Used in the image's ```title``` atteribute
 
 ```jsx
     <GCTortilla wordmarkFIP={{
@@ -113,9 +113,9 @@ export default App;
     <GCTortilla footerTheme={"light"}/>
 ```
 - **Footer Links**: An array of objects containing the links to be shown in the footer. If you choose to pass in some links you must pass the following properties:
-    1. **URL**: The url you wish to link to
-    2. **Label**: The link's text that the user can click on
-    3. **Title**: *(Optional)* Used in the link's ```title``` attribute
+    - **URL**: The url you wish to link to
+    - **Label**: The link's text that the user can click on
+    - **Title**: *(Optional)* Used in the link's ```title``` attribute
 ```jsx
     <GCTortilla footerLinks={[
         {
@@ -166,9 +166,9 @@ export default App;
 > GCSplashScreen can be customized by passing the following **optional** props
 
 - **Signature FIP / Branding**: An object containing the branding element that appears at the top of the splash screen window *(Defaults to the Government of Canada Signature FIP)*. The object has 3 properties:
-    1. **Image**: *(Required)* URL or file path of an image
-    2. **Alt Text**: *(Optional)* Used in the image's ```alt``` attribute
-    3. **Title**: *(Optional)* Used in the image's ```title``` atteribute
+    - **Image**: *(Required)* URL or file path of an image
+    - **Alt Text**: *(Optional)* Used in the image's ```alt``` attribute
+    - **Title**: *(Optional)* Used in the image's ```title``` atteribute
 
 ```jsx
     <GCSplashScreen signatureFIP={{
@@ -178,9 +178,9 @@ export default App;
 ```
 
 - **Logo**: An object containing the app's logo that appears in the center of the splash screen window. The object has 3 properties:
-    1. **Image**: *(Required)* URL or file path of an image
-    2. **Alt Text**: *(Optional)* Used in the image's ```alt``` attribute
-    3. **Title**: *(Optional)* Used in the image's ```title``` atteribute
+    - **Image**: *(Required)* URL or file path of an image
+    - **Alt Text**: *(Optional)* Used in the image's ```alt``` attribute
+    - **Title**: *(Optional)* Used in the image's ```title``` atteribute
    
 ```jsx
     <GCSplashScreen logo={{
@@ -192,8 +192,8 @@ export default App;
 ![The Splash Screen with a custom logo](assets/logoSplashScreen.png)
 
 - **Routes**: An object containing routes for the site's home page in both French and English *(defaults to ```'/en'``` for English and ```'/fr'``` for French)*
-    1. **English**: *(Required)* Path of the English home page
-    2. **French**: *(Required)* Path of the French home page
+    - **English**: *(Required)* Path of the English home page
+    - **French**: *(Required)* Path of the French home page
 ```jsx
     <GCSplashScreen routes={{
         english: "/english",
@@ -202,12 +202,12 @@ export default App;
 ```
 
 - **Terms & Conditions**: An object containing two objects (English/French) with a URL and a label. Although this is meant to be terms and conditions, you may use this prop to link to anything *(Defaults to the Canada.ca Terms & Conditions in both French and English)*. If you choose to pass the terms prop it **must include** the following properties
-    1. **English**: Object containing a URL and label for the English terms and conditions
-       1. **URL**: English terms and conditions URL
-       2. **Label**: The link's text that the user can click on
-    2. **French**: Object containing a URL and label for the French terms and conditions
-       1. **URL**: French terms and conditions URL
-       2. **Label**: The link's text that the user can click on
+    - **English**: Object containing a URL and label for the English terms and conditions
+       - **URL**: English terms and conditions URL
+       - **Label**: The link's text that the user can click on
+    - **French**: Object containing a URL and label for the French terms and conditions
+       - **URL**: French terms and conditions URL
+       - **Label**: The link's text that the user can click on
 ```jsx
     <GCSplashScreen terms={{
         english: {
@@ -222,9 +222,9 @@ export default App;
 ```
 
 - **Wordmark FIP / Branding**: An object containing the branding element that appears at the bottom of the splash screen window *(Defaults to the Government of Canada Wordmark FIP)*. The object has 3 properties:
-    1. **Image**: *(Required)* URL or file path of an image
-    2. **Alt Text**: *(Optional)* Used in the image's ```alt``` attribute
-    3. **Title**: *(Optional)* Used in the image's ```title``` atteribute
+    - **Image**: *(Required)* URL or file path of an image
+    - **Alt Text**: *(Optional)* Used in the image's ```alt``` attribute
+    - **Title**: *(Optional)* Used in the image's ```title``` atteribute
 
 ```jsx
     <GCSplashScreen wordmarkFIP={{
@@ -265,9 +265,9 @@ export default App;
 > GCHeader can be customized by passing the following **optional** props
 
 - **Signature FIP / Branding**: An object containing the branding element that appears in the header *(Defaults to the Government of Canada Signature FIP)*. The object has 3 properties:
-    1. **Image**: *(Required)* URL or file path of an image
-    2. **Alt Text**: *(Optional)* Used in the image's ```alt``` attribute
-    3. **Title**: *(Optional)* Used in the image's ```title``` atteribute
+    - **Image**: *(Required)* URL or file path of an image
+    - **Alt Text**: *(Optional)* Used in the image's ```alt``` attribute
+    - **Title**: *(Optional)* Used in the image's ```title``` atteribute
 
 ```jsx
     <GCHeader signatureFIP={{
@@ -306,9 +306,9 @@ export default App;
 ![The footer with the light theme](assets/footerLightTheme.png)
 
 - **Links**: An array of objects containing the links to be shown in the footer. If you choose to pass in some links you must pass the following properties:
-    1. **URL**: The url you wish to link to
-    2. **Label**: The link's text that the user can click on
-    3. **Title**: *(Optional)* Used in the link's ```title``` attribute
+    - **URL**: The url you wish to link to
+    - **Label**: The link's text that the user can click on
+    - **Title**: *(Optional)* Used in the link's ```title``` attribute
 ```jsx
     <GCFooter links={[
         {
@@ -331,9 +331,9 @@ export default App;
 
 
 - **FIP / Branding**: An object containing the branding element that appears in the footer *(Defaults to the Government of Canada Black & White Wordmark FIP)*. The object has 3 properties:
-    1. **Image**: *(Required)* URL or file path of an image
-    2. **Alt Text**: *(Optional)* Used in the image's ```alt``` attribute
-    3. **Title**: *(Optional)* Used in the image's ```title``` atteribute
+    - **Image**: *(Required)* URL or file path of an image
+    - **Alt Text**: *(Optional)* Used in the image's ```alt``` attribute
+    - **Title**: *(Optional)* Used in the image's ```title``` atteribute
 
 ```jsx
     <GCFooter FIP={{
