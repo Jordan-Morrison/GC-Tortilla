@@ -11,6 +11,8 @@ You can utilize all components pre-packaged together by importing **GCTortilla**
 
 ## Screenshots
 ![The default Splash Screen](assets/defaultSplashScreen.png)
+
+
 ![The header and footer](assets/headerAndFooter.png)
 
 ## Install
