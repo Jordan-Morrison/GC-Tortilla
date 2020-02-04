@@ -125,7 +125,7 @@ GCSplashScreen.defaultProps = {
         altText: "Government of Canada Wordmark"
     },
     // Default background image is a random image from unsplash with the same resolution as the user's display
-    backgroundImage: `https://source.unsplash.com/random/${window.innerWidth}x${window.innerHeight}`
+    backgroundImage: `https://source.unsplash.com/random/${typeof window !== "undefined" ? window.innerWidth : 1000}x${typeof window !== "undefined" ? window.innerHeight : 800}`
 };
 
 export default GCSplashScreen;
