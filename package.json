@@ -1,6 +1,6 @@
 {
   "name": "gc-tortilla",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Comms approved components for your GC React app",
   "author": "Jordan-Morrison",
   "license": "MIT",
@@ -60,6 +60,6 @@
   ],
   "dependencies": {
     "prop-types": "^15.7.2",
-    "react-scrolllock": "^4.0.1"
+    "react-scrolllock": "^5.0.1"
   }
 }
